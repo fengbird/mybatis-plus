@@ -130,6 +130,21 @@ public abstract class AbstractTemplateEngine {
                         writer(objectMap, templateFilePath(template.getServiceImpl()), implFile);
                     }
                 }
+
+                // IMpProvider.java
+                if (null != tableInfo.getProviderName() && null != pathInfo.get(ConstVal.PROVIDER_PATH)) {
+                    String serviceFile = String.format((pathInfo.get(ConstVal.PROVIDER_PATH) + File.separator + tableInfo.getProviderName() + suffixJavaOrKt()), entityName);
+                    if (isCreate(FileType.PROVIDER, serviceFile)) {
+                        writer(objectMap, templateFilePath(template.getProvider()), serviceFile);
+                    }
+                }
+                // MpProviderImpl.java
+                if (null != tableInfo.getProviderImplName() && null != pathInfo.get(ConstVal.PROVIDER_IMPL_PATH)) {
+                    String implFile = String.format((pathInfo.get(ConstVal.PROVIDER_IMPL_PATH) + File.separator + tableInfo.getProviderImplName() + suffixJavaOrKt()), entityName);
+                    if (isCreate(FileType.PROVIDER_IMPL, implFile)) {
+                        writer(objectMap, templateFilePath(template.getProviderImpl()), implFile);
+                    }
+                }
                 // MpController.java
                 if (null != tableInfo.getControllerName() && null != pathInfo.get(ConstVal.CONTROLLER_PATH)) {
                     String controllerFile = String.format((pathInfo.get(ConstVal.CONTROLLER_PATH) + File.separator + tableInfo.getControllerName() + suffixJavaOrKt()), entityName);

@@ -60,6 +60,10 @@ public class PackageConfig {
      * Service Impl包名
      */
     private String serviceImpl = "service.impl";
+
+    private String provider = "provider";
+
+    private String providerImpl = "provider.impl";
     /**
      * Mapper包名
      */

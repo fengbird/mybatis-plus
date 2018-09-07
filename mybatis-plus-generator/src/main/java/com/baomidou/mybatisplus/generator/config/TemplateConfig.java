@@ -33,6 +33,10 @@ public class TemplateConfig {
 
     private String serviceImpl = ConstVal.TEMPLATE_SERVICE_IMPL;
 
+    private String provider = ConstVal.TEMPLATE_PROVIDER;
+
+    private String providerImpl = ConstVal.TEMPLATE_PROVIDER_IMPL;
+
     private String mapper = ConstVal.TEMPLATE_MAPPER;
 
     private String xml = ConstVal.TEMPLATE_XML;
@@ -68,6 +72,24 @@ public class TemplateConfig {
 
     public TemplateConfig setServiceImpl(String serviceImpl) {
         this.serviceImpl = serviceImpl;
+        return this;
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+
+    public TemplateConfig setProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+
+    public String getProviderImpl() {
+        return providerImpl;
+    }
+
+    public TemplateConfig setProviderImpl(String providerImpl) {
+        this.providerImpl = providerImpl;
         return this;
     }
 

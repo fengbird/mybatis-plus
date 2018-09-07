@@ -252,6 +252,8 @@ public class ConfigBuilder {
         packageInfo.put(ConstVal.XML, joinPackage(config.getParent(), config.getXml()));
         packageInfo.put(ConstVal.SERVICE, joinPackage(config.getParent(), config.getService()));
         packageInfo.put(ConstVal.SERVICE_IMPL, joinPackage(config.getParent(), config.getServiceImpl()));
+        packageInfo.put(ConstVal.PROVIDER,joinPackage(config.getParent(),config.getProvider()));
+        packageInfo.put(ConstVal.PROVIDER_IMPL, joinPackage(config.getParent(), config.getProviderImpl()));
         packageInfo.put(ConstVal.CONTROLLER, joinPackage(config.getParent(), config.getController()));
 
         // 自定义路径
@@ -266,6 +268,8 @@ public class ConfigBuilder {
             setPathInfo(pathInfo, template.getXml(), outputDir, ConstVal.XML_PATH, ConstVal.XML);
             setPathInfo(pathInfo, template.getService(), outputDir, ConstVal.SERVICE_PATH, ConstVal.SERVICE);
             setPathInfo(pathInfo, template.getServiceImpl(), outputDir, ConstVal.SERVICE_IMPL_PATH, ConstVal.SERVICE_IMPL);
+            setPathInfo(pathInfo, template.getProvider(), outputDir, ConstVal.PROVIDER_PATH, ConstVal.PROVIDER);
+            setPathInfo(pathInfo, template.getProviderImpl(), outputDir, ConstVal.PROVIDER_IMPL_PATH, ConstVal.PROVIDER_IMPL);
             setPathInfo(pathInfo, template.getController(), outputDir, ConstVal.CONTROLLER_PATH, ConstVal.CONTROLLER);
         }
     }
@@ -368,6 +372,16 @@ public class ConfigBuilder {
                 tableInfo.setServiceImplName(String.format(globalConfig.getServiceImplName(), entityName));
             } else {
                 tableInfo.setServiceImplName(entityName + ConstVal.SERVICE_IMPL);
+            }
+            if (StringUtils.isNotEmpty(globalConfig.getProviderName())) {
+                tableInfo.setProviderName(String.format(globalConfig.getProviderName(), entityName));
+            } else {
+                tableInfo.setProviderName("I" + entityName + ConstVal.PROVIDER);
+            }
+            if (StringUtils.isNotEmpty(globalConfig.getProviderImplName())) {
+                tableInfo.setProviderImplName(String.format(globalConfig.getProviderImplName(), entityName));
+            } else {
+                tableInfo.setProviderImplName(entityName + ConstVal.PROVIDER_IMPL);
             }
             if (StringUtils.isNotEmpty(globalConfig.getControllerName())) {
                 tableInfo.setControllerName(String.format(globalConfig.getControllerName(), entityName));

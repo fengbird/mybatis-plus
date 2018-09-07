@@ -44,6 +44,8 @@ public class TableInfo {
     private String xmlName;
     private String serviceName;
     private String serviceImplName;
+    private String providerName;
+    private String providerImplName;
     private String controllerName;
     private List<TableField> fields;
     /**
@@ -143,6 +145,22 @@ public class TableInfo {
 
     public void setServiceImplName(String serviceImplName) {
         this.serviceImplName = serviceImplName;
+    }
+
+    public String getProviderName() {
+        return providerName;
+    }
+
+    public void setProviderName(String providerName) {
+        this.providerName = providerName;
+    }
+
+    public String getProviderImplName() {
+        return providerImplName;
+    }
+
+    public void setProviderImplName(String providerImplName) {
+        this.providerImplName = providerImplName;
     }
 
     public String getControllerName() {

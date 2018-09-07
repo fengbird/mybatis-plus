@@ -30,5 +30,7 @@ public enum FileType {
     SERVICE,
     SERVICE_IMPL,
     CONTROLLER,
+    PROVIDER,
+    PROVIDER_IMPL,
     OTHER
 }

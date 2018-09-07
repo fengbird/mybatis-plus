@@ -34,6 +34,8 @@ public interface ConstVal {
     String ENTITY = "Entity";
     String SERVICE = "Service";
     String SERVICE_IMPL = "ServiceImpl";
+    String PROVIDER = "Provider";
+    String PROVIDER_IMPL = "ProviderImpl";
     String MAPPER = "Mapper";
     String XML = "Xml";
     String CONTROLLER = "Controller";
@@ -41,6 +43,8 @@ public interface ConstVal {
     String ENTITY_PATH = "entity_path";
     String SERVICE_PATH = "service_path";
     String SERVICE_IMPL_PATH = "service_impl_path";
+    String PROVIDER_PATH = "provider_path";
+    String PROVIDER_IMPL_PATH = "provider_impl_path";
     String MAPPER_PATH = "mapper_path";
     String XML_PATH = "xml_path";
     String CONTROLLER_PATH = "controller_path";
@@ -59,6 +63,8 @@ public interface ConstVal {
     String TEMPLATE_XML = "/templates/mapper.xml";
     String TEMPLATE_SERVICE = "/templates/service.java";
     String TEMPLATE_SERVICE_IMPL = "/templates/serviceImpl.java";
+    String TEMPLATE_PROVIDER = "/templates/provider.java";
+    String TEMPLATE_PROVIDER_IMPL = "/templates/providerImpl.java";
     String TEMPLATE_CONTROLLER = "/templates/controller.java";
 
     String VM_LOAD_PATH_KEY = "file.resource.loader.class";
