@@ -27,6 +27,10 @@ public class TemplateConfig {
 
     private String entity = ConstVal.TEMPLATE_ENTITY_JAVA;
 
+    private String req = ConstVal.TEMPLATE_REQ;
+
+    private String resp = ConstVal.TEMPLATE_RESP;
+
     private String entityKt = ConstVal.TEMPLATE_ENTITY_KT;
 
     private String service = ConstVal.TEMPLATE_SERVICE;
@@ -54,6 +58,24 @@ public class TemplateConfig {
 
     public TemplateConfig setEntity(String entity) {
         this.entity = entity;
+        return this;
+    }
+
+    public String getReq() {
+        return req;
+    }
+
+    public TemplateConfig setReq(String req) {
+        this.req = req;
+        return this;
+    }
+
+    public String getResp() {
+        return resp;
+    }
+
+    public TemplateConfig setResp(String resp) {
+        this.resp = resp;
         return this;
     }
 

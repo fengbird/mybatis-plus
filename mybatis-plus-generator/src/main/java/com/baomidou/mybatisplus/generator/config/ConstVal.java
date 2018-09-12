@@ -32,6 +32,8 @@ public interface ConstVal {
     String MODULE_NAME = "ModuleName";
 
     String ENTITY = "Entity";
+    String REQ = "Req";
+    String RESP = "Resp";
     String SERVICE = "Service";
     String SERVICE_IMPL = "ServiceImpl";
     String PROVIDER = "Provider";
@@ -41,6 +43,8 @@ public interface ConstVal {
     String CONTROLLER = "Controller";
 
     String ENTITY_PATH = "entity_path";
+    String REQ_PATH = "req_path";
+    String RESP_PATH = "resp_path";
     String SERVICE_PATH = "service_path";
     String SERVICE_IMPL_PATH = "service_impl_path";
     String PROVIDER_PATH = "provider_path";
@@ -58,6 +62,8 @@ public interface ConstVal {
     String XML_SUFFIX = ".xml";
 
     String TEMPLATE_ENTITY_JAVA = "/templates/entity.java";
+    String TEMPLATE_REQ = "/templates/req.java";
+    String TEMPLATE_RESP = "/templates/resp.java";
     String TEMPLATE_ENTITY_KT = "/templates/entity.kt";
     String TEMPLATE_MAPPER = "/templates/mapper.java";
     String TEMPLATE_XML = "/templates/mapper.xml";

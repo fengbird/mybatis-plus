@@ -102,6 +102,20 @@ public abstract class AbstractTemplateEngine {
                         writer(objectMap, templateFilePath(template.getEntity(getConfigBuilder().getGlobalConfig().isKotlin())), entityFile);
                     }
                 }
+                //Req.java
+                if (null != tableInfo.getReqName() && null != pathInfo.get(ConstVal.REQ_PATH)) {
+                    String reqFile = String.format((pathInfo.get(ConstVal.REQ_PATH) + File.separator + tableInfo.getReqName() + suffixJavaOrKt()), entityName);
+                    if (isCreate(FileType.REQ, reqFile)) {
+                        writer(objectMap, templateFilePath(template.getReq()), reqFile);
+                    }
+                }
+                //Resp.java
+                if (null != tableInfo.getRespName() && null != pathInfo.get(ConstVal.RESP_PATH)) {
+                    String respFile = String.format((pathInfo.get(ConstVal.RESP_PATH) + File.separator + tableInfo.getRespName() + suffixJavaOrKt()), entityName);
+                    if (isCreate(FileType.RESP, respFile)) {
+                        writer(objectMap, templateFilePath(template.getResp()), respFile);
+                    }
+                }
                 // MpMapper.java
                 if (null != tableInfo.getMapperName() && null != pathInfo.get(ConstVal.MAPPER_PATH)) {
                     String mapperFile = String.format((pathInfo.get(ConstVal.MAPPER_PATH) + File.separator + tableInfo.getMapperName() + suffixJavaOrKt()), entityName);
@@ -243,6 +257,14 @@ public abstract class AbstractTemplateEngine {
         objectMap.put("activeRecord", globalConfig.isActiveRecord());
         objectMap.put("kotlin", globalConfig.isKotlin());
         objectMap.put("swagger2", globalConfig.isSwagger2());
+        objectMap.put("enableExport",globalConfig.isEnableExport());
+        objectMap.put("enableSave", globalConfig.isEnableSave());
+        objectMap.put("enableShiro", globalConfig.isEnableShiro());
+        objectMap.put("enableDelete", globalConfig.isEnableDelete());
+        objectMap.put("enableImport", globalConfig.isEnableImport());
+        objectMap.put("enableSysLog", globalConfig.isEnableSysLog());
+        objectMap.put("enableSingleTable", globalConfig.isEnableSingleTable());
+        objectMap.put("enableMultiplyTables", globalConfig.isEnableMultiplyTables());
         objectMap.put("date", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
         objectMap.put("table", tableInfo);
         objectMap.put("enableCache", globalConfig.isEnableCache());

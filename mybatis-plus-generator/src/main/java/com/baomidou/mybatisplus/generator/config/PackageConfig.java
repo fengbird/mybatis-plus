@@ -52,6 +52,16 @@ public class PackageConfig {
     private String entity = "entity";
 
     /**
+     * Req包名
+     */
+    private String req = "req";
+
+    /**
+     * Resp包名
+     */
+    private String resp = "resp";
+
+    /**
      * Service包名
      */
     private String service = "service";

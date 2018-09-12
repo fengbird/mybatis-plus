@@ -40,6 +40,8 @@ public class TableInfo {
     private String comment;
 
     private String entityName;
+    private String reqName;
+    private String respName;
     private String mapperName;
     private String xmlName;
     private String serviceName;
@@ -113,6 +115,22 @@ public class TableInfo {
     public void setEntityName(StrategyConfig strategyConfig, String entityName) {
         this.entityName = entityName;
         this.setConvert(strategyConfig);
+    }
+
+    public String getReqName() {
+        return reqName;
+    }
+
+    public void setReqName(String reqName) {
+        this.reqName = reqName;
+    }
+
+    public String getRespName() {
+        return respName;
+    }
+
+    public void setRespName(String respName) {
+        this.respName = respName;
     }
 
     public String getMapperName() {

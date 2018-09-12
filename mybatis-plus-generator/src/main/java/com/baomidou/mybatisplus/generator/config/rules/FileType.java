@@ -25,6 +25,8 @@ package com.baomidou.mybatisplus.generator.config.rules;
  */
 public enum FileType {
     ENTITY,
+    REQ,
+    RESP,
     MAPPER,
     XML,
     SERVICE,

@@ -69,6 +69,46 @@ public class GlobalConfig {
     private boolean swagger2 = false;
 
     /**
+     * 开启导出Excel功能
+     */
+    private boolean enableExport = false;
+
+    /**
+     * 开启保存功能
+     */
+    private boolean enableSave = false;
+
+    /**
+     * 开启shiro权限控制
+     */
+    private boolean enableShiro = false;
+
+    /**
+     * 开启删除功能
+     */
+    private boolean enableDelete = false;
+
+    /**
+     * 开启导入功能
+     */
+    private boolean enableImport = false;
+
+    /**
+     * 开启系统日志功能
+     */
+    private boolean enableSysLog = false;
+
+    /**
+     * 开启单表条件查询
+     */
+    private boolean enableSingleTable = false;
+
+    /**
+     * 开启多表条件查询
+     */
+    private boolean enableMultiplyTables = false;
+
+    /**
      * 开启 ActiveRecord 模式
      */
     private boolean activeRecord = false;
@@ -87,10 +127,13 @@ public class GlobalConfig {
      * 开启 baseColumnList
      */
     private boolean baseColumnList = false;
+
     /**
      * 各层文件名称方式，例如： %Action 生成 UserAction
      */
     private String entityName;
+    private String reqName;
+    private String respName;
     private String mapperName;
     private String xmlName;
     private String serviceName;
